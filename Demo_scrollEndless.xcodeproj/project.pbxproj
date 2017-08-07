@@ -12,6 +12,8 @@
 		E227BF561F3304A4002FE2B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E227BF541F3304A4002FE2B6 /* Main.storyboard */; };
 		E227BF581F3304A4002FE2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E227BF571F3304A4002FE2B6 /* Assets.xcassets */; };
 		E227BF5B1F3304A4002FE2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E227BF591F3304A4002FE2B6 /* LaunchScreen.storyboard */; };
+		E227BF631F330581002FE2B6 /* EndlessLoopScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E227BF621F330581002FE2B6 /* EndlessLoopScrollView.swift */; };
+		E227BF651F330BD8002FE2B6 /* Timer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E227BF641F330BD8002FE2B6 /* Timer+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		E227BF571F3304A4002FE2B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E227BF5A1F3304A4002FE2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E227BF5C1F3304A4002FE2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E227BF621F330581002FE2B6 /* EndlessLoopScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndlessLoopScrollView.swift; sourceTree = "<group>"; };
+		E227BF641F330BD8002FE2B6 /* Timer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer+Extension.swift"; sourceTree = "<group>"; };
+		E227BF661F335D15002FE2B6 /* Demo_scrollEndless-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo_scrollEndless-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 			children = (
 				E227BF4F1F3304A4002FE2B6 /* Demo_scrollEndless */,
 				E227BF4E1F3304A4002FE2B6 /* Products */,
+				E227BF761F340D85002FE2B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +62,22 @@
 			children = (
 				E227BF501F3304A4002FE2B6 /* AppDelegate.swift */,
 				E227BF521F3304A4002FE2B6 /* ViewController.swift */,
+				E227BF621F330581002FE2B6 /* EndlessLoopScrollView.swift */,
+				E227BF641F330BD8002FE2B6 /* Timer+Extension.swift */,
 				E227BF541F3304A4002FE2B6 /* Main.storyboard */,
 				E227BF571F3304A4002FE2B6 /* Assets.xcassets */,
 				E227BF591F3304A4002FE2B6 /* LaunchScreen.storyboard */,
 				E227BF5C1F3304A4002FE2B6 /* Info.plist */,
+				E227BF661F335D15002FE2B6 /* Demo_scrollEndless-Bridging-Header.h */,
 			);
 			path = Demo_scrollEndless;
+			sourceTree = "<group>";
+		};
+		E227BF761F340D85002FE2B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +112,8 @@
 				TargetAttributes = {
 					E227BF4C1F3304A4002FE2B6 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = CWT6FLBDWF;
+						DevelopmentTeam = 2Z7NL663JA;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E227BF531F3304A4002FE2B6 /* ViewController.swift in Sources */,
+				E227BF651F330BD8002FE2B6 /* Timer+Extension.swift in Sources */,
+				E227BF631F330581002FE2B6 /* EndlessLoopScrollView.swift in Sources */,
 				E227BF511F3304A4002FE2B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,11 +280,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CWT6FLBDWF;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2Z7NL663JA;
 				INFOPLIST_FILE = Demo_scrollEndless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.himin.Demo-scrollEndless";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo_scrollEndless/Demo_scrollEndless-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,11 +296,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CWT6FLBDWF;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2Z7NL663JA;
 				INFOPLIST_FILE = Demo_scrollEndless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.himin.Demo-scrollEndless";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo_scrollEndless/Demo_scrollEndless-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +326,7 @@
 				E227BF611F3304A4002FE2B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
